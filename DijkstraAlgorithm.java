@@ -30,7 +30,7 @@ public class DijkstraAlgorithm {
         Arrays.fill(distances, Integer.MAX_VALUE);  // Initialize all distances to infinity
         distances[start] = 0;
 
-        Priorityqueue<Node> pq = new Priorityqueue<>();
+        PriorityQueue<Node> pq = new PriorityQueue<>();
         pq.add(new Node(start, 0));
 
         while (!pq.isEmpty()) {
