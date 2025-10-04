@@ -6,11 +6,13 @@ public class AlienDictionary {
     static class Edge {
         int src;
         int dest;
+
         public Edge(int s, int d) {
             this.src = s;
             this.dest = d;
         }
     }
+
     public static void createDirectedGraph(String[] dict, ArrayList<Edge>[] graph, int N) {
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<>();
@@ -31,7 +33,7 @@ public class AlienDictionary {
     }
 
     public static String findOrder(int N, int k, String[] dict, ArrayList<Edge>[] graph) {
-        //topological sort
+        // topological sort
         boolean vis[] = new boolean[graph.length];
         boolean stack[] = new boolean[graph.length];
         Stack<Integer> s = new Stack<>();
@@ -90,7 +92,8 @@ public class AlienDictionary {
     public static void main(String[] args) {
         int N = 5;
         int k = 4;
-        String[] dict1 = {"baa","abcd","abca","cab","cad"};
+        String[] dict1 = { "baa", "abcd", "abca", "cab", "cad" };
+        @SuppressWarnings("unchecked")
         ArrayList<Edge> graph[] = new ArrayList[k];
         createDirectedGraph(dict1, graph, N);
         System.out.println(findOrder(N, k, dict1, graph));
