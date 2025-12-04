@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class DigitDPTemplate {
     long[][][][] dp;
     char[] s;
